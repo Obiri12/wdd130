@@ -1,0 +1,107 @@
+/* Basic reset and body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+nav {
+  background-color: steelblue;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  display: block;
+  padding: 20px;
+}
+
+h1 {
+  color: steelblue;
+}
+
+img {
+  width: 150px;
+  height: auto;
+  border: 1px solid steelblue;
+  padding: 2px;
+  box-shadow: 0 0 30px gray;
+}
+
+p {
+  padding: 10px;
+}
+header, main, aside, footer {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    color: #fff;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styling */
+main {
+    max-width: 840px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Main image styling */
+main img {
+    width: 150px;
+    height: auto;
+}
+
+/* Paragraph padding reset */
+p {
+    padding: 0;
+}
+
+/* Aside element styling */
+aside {
+    width: 20rem;
+    margin: 1rem auto; /* Center the aside and give margin */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    background-color: #eee;
+    color: #333;
+    text-align: center;
+}
+
+/* Aside image styling */
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+/* Footer styling */
+footer {
+    margin-top: auto;
+    margin-top: 15px;
+    border-top: 1px solid #000;
+    text-align: center;
+}
