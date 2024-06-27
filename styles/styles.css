@@ -1,4 +1,8 @@
 /* Basic reset and body styling */
+*   {margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -45,6 +49,7 @@ header, main, aside, footer {
 header {
     background-color: #333;
     color: #fff;
+    padding: 10px 20px;
 }
 
 header nav {
@@ -56,7 +61,7 @@ header nav {
 header nav a {
     color: #fff;
     text-decoration: none;
-    padding: 10px;
+    padding: 10px 20px;
 }
 
 header nav a:hover {
@@ -68,18 +73,35 @@ main {
     max-width: 840px;
     margin: 0 auto;
     text-align: center;
+    padding: 20px;
 }
 
 /* Main image styling */
 main img {
-    width: 150px;
+    width: 130px;
     height: auto;
+    border: 1px solid steelblue;
+    padding: 2px;
+    box-shadow: 0 0 30px gray;
+    float: right;
+    margin: 0 0 1rem 1rem;
 }
 
 /* Paragraph padding reset */
 p {
-    padding: 0;
+    margin: 0;
+    
 }
+
+.box {
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    background-color: #eee;
+    color: #333;
+}
+
+
 
 /* Aside element styling */
 aside {
@@ -90,12 +112,23 @@ aside {
     background-color: #eee;
     color: #333;
     text-align: center;
+    position: relative;
 }
+
 
 /* Aside image styling */
 aside img {
     width: 200px;
     height: auto;
+}
+
+aside h2 {
+
+    position: absolute;
+    top: 60px;
+    left: 120px;
+    color: black;
+    padding: 5px;
 }
 
 /* Footer styling */
@@ -104,4 +137,24 @@ footer {
     margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+}
+
+footer p {
+
+    margin: 0;
+}
+
+ul.box {
+
+    list-style-type: initial;
+    padding: 2rem;
+    text-align: left;
+}
+
+ul.box {
+
+    margin-bottom: 10px;
 }

@@ -1,65 +1,71 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&family=Montserrat&display=swap');
+/* Step 1: Import the Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
 
-/* CSS Variables */
+/* Step 2: Define CSS variables for fonts and other properties */
 :root {
     --primary-color: #396e94;
     --secondary-color: #e7c24f;
     --accent1-color: #a43312;
     --accent2-color: #381d2a;
+
     --heading-font: 'Roboto', sans-serif;
     --paragraph-font: 'Open Sans', sans-serif;
-    --callout-font: 'Montserrat', sans-serif;
+    
     --nav-background-color: #396e94;
     --nav-link-color: #ffffff;
     --nav-hover-link-color: #e7c24f;
     --nav-hover-background-color: #a43312;
 }
 
-/* Base styles */
+/* Step 3: Apply font variables to elements */
 body {
     font-family: var(--paragraph-font);
     max-width: 960px;
-    padding: 20px;
     margin: 0 auto;
-    box-sizing: border-box;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 header {
     padding: 20px;
     background-color: var(--accent1-color);
     color: #fff;
-    text-align: center;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
 }
 
 p {
-    padding: 25px;
+    padding-bottom: 25px;
 }
 
 nav {
     background-color: var(--nav-background-color);
     font-size: 1.2rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 nav a {
-    display: block;
     color: var(--nav-link-color);
     text-decoration: none;
     padding: 1rem;
-}
-
-nav a:link, nav a:visited {
-    color: var(--nav-link-color);
+    transition: color 0.3s, background-color 0.3s;
 }
 
 nav a:hover {
     color: var(--nav-hover-link-color);
     background-color: var(--nav-hover-background-color);
+}
+
+footer {
+    background-color: var(--accent2-color);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
 }
