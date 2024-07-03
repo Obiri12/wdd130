@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    box-sizing: border-box;
+  
 }
 header, .grid, footer {
     max-width: 840px;
