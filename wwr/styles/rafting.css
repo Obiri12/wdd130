@@ -34,16 +34,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     padding: 20px;
     background-color: var(--accent1-color);
     color: #fff;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
 header img {
     max-height: 50px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
 }
 
 nav {
@@ -80,30 +85,66 @@ nav a:hover {
 
 .hero h1 {
     position: absolute;
-    top: 20%;
+    top: 13%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3rem;
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
+    margin: 0;
 }
 
 .hero article {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translate(-50%, -10%);
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    text-align: left;
-    width: 80%;
-    max-width: 600px;
+   background: rgba(0, 0, 0, 0.5);
+   padding: 20px;
+   text-align: left;
+   margin-top: 20px;
+   position: absolute;
+   top: 60%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 60%;
 }
 
 .hero article img {
     float: right;
     margin-left: 20px;
     max-width: 100px;
+}
+
+.history-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.history-content img {
+    max-width: 200px;
+    margin-right: 20px;
+}
+
+.adventure-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.adventure-gallery figure {
+    flex: 1 1 calc(20% - 10px);
+    margin: 0;
+}
+
+.adventure-gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.adventure-gallery figcaption {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px;
+    font-size: 0.9rem;
 }
 
 footer {
@@ -115,7 +156,7 @@ footer {
 
 footer nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     margin-top: 10px;
 }
 
