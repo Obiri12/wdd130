@@ -3,20 +3,22 @@
 
 /* Step 2: Define CSS variables for fonts and other properties */
 :root {
-    --primary-color: #396e94;
-    --secondary-color: #e7c24f;
-    --accent1-color: #a43312;
-    --accent2-color: #381d2a;
+    --primary-color: #003366; /* Darker shade for better contrast */
+    --secondary-color: #FFD700; /* Remains the same as it provides good contrast */
+    --accent1-color: #C62828; /* Darker shade for better contrast */
+    --accent2-color: #4E342E; /* Adjusted for contrast */
 
     --heading-font: 'Roboto', sans-serif;
     --paragraph-font: 'Open Sans', sans-serif;
-    
-    --nav-background-color: #396e94;
-    --nav-link-color: #ffffff;
-    --nav-hover-link-color: #e7c24f;
-    --nav-hover-background-color: #a43312;
-}
 
+    --nav-background-color: #003366;
+    --nav-link-color: #FFFFFF;
+    --nav-hover-link-color: #FFD700;
+    --nav-hover-background-color: #C62828;
+}
+* {
+    box-sizing: border-box;
+}
 /* Global Styles */
 body {
     font-family: var(--paragraph-font);
@@ -24,8 +26,10 @@ body {
     margin: 0 auto;
     padding: 20px;
     line-height: 1.6;
+    background-color: #FAFAFA; /* Light background for good contrast with text */
+    color: #333;
 }
-
+/* Heading Styles*/
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     color: var(--primary-color);
@@ -36,20 +40,22 @@ h1, h2, h3, h4, h5, h6 {
 /* Header Styles */
 header {
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    padding: 20px;
+    grid-template-columns: 150px auto;
+    gap: 1em;
+    padding: 10px;
     background-color: var(--accent1-color);
-    color: #fff;
+   
     align-items: center;
 }
 
 header img {
-    max-height: 50px;
+    max-width: 100%;
 }
 
 header h1 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     margin: 0;
+    text-align: center;
 }
 
 /* Navigation Styles */
@@ -59,13 +65,17 @@ nav {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 nav a {
     color: var(--nav-link-color);
     text-decoration: none;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     transition: color 0.3s, background-color 0.3s;
+    display: block;
+    text-align: center;
 }
 
 nav a:hover {
@@ -76,43 +86,49 @@ nav a:hover {
 /* Hero Section Styles */
 .hero {
     position: relative;
-    text-align: center;
-    color: white;
+
 }
 
 .hero img {
     display: block;
     width: 100%;
-    height: auto;
+    height: auto; 
 }
 
 .hero h1 {
     position: absolute;
-    top: 13%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    top: 50px;
+    left: 0;
+    right: 0;
     font-size: 3rem;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
+    background: rgba(0, 0, 0, 0.6); /* Darker background for better text contrast */
+    padding: 20px;
+    border-radius: 8px;
     margin: 0;
 }
 
 .hero article {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6); /* Darker background for better text contrast */
     padding: 20px;
     text-align: left;
     margin-top: 20px;
     position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
+    top: 150px;
+    left: 10%;
+    right: 10%;
+    border-radius: 8px;
 }
 
 .hero article img {
     float: right;
     margin-left: 20px;
-    max-width: 100px;
+    max-width: 250px;
+    border-radius: 8px;
+}
+article p {
+    color: #fff;
 }
 
 /* History Section Styles */
@@ -120,11 +136,14 @@ nav a:hover {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
 }
 
 .history-content img {
     max-width: 200px;
     margin-right: 20px;
+    border-radius: 8px;
 }
 
 /* Adventure Gallery Styles */
@@ -142,22 +161,24 @@ nav a:hover {
 .adventure-gallery img {
     width: 100%;
     height: auto;
+    border-radius: 8px;
 }
 
 .adventure-gallery figcaption {
     text-align: center;
     background-color: var(--primary-color);
-    color: white;
-    padding: 5px;
-    font-size: 0.9rem;
+    color: #FFFFFF; /* High contrast with background */
+    padding: 10px;
+    font-size: 1rem;
 }
 
 /* Footer Styles */
 footer {
     background-color: var(--accent2-color);
-    color: #fff;
+    color: #FFFFFF;
     text-align: center;
     padding: 10px 0;
+    border-top: 4px solid var(--secondary-color);
 }
 
 footer nav {
@@ -166,13 +187,18 @@ footer nav {
     margin-top: 10px;
 }
 
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
 footer nav a {
     margin: 0 10px;
 }
 
 footer nav a img {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 33px;
     filter: invert(1);
     transition: filter 0.3s;
 }
@@ -186,13 +212,15 @@ footer nav a:hover img {
 #contact-info {
     margin-top: 40px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 20px;
 }
 
 #contact-info > div {
     flex: 1;
-    margin-right: 20px;
+    margin-right: 250px;
 }
 
 #contact-form {
@@ -203,17 +231,18 @@ footer nav a:hover img {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
+    color: var(--primary-color);
 }
 
 #contact-form input[type="text"],
 #contact-form input[type="email"],
 #contact-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 20px;
     font-size: 1rem;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
     box-sizing: border-box;
 }
 
@@ -222,7 +251,7 @@ footer nav a:hover img {
 }
 
 #contact-form textarea {
-    height: 150px;
+    height: 200px;
 }
 
 #contact-form .checkbox-label {
@@ -233,12 +262,13 @@ footer nav a:hover img {
 
 #contact-form .submit-btn {
     background-color: var(--accent1-color);
-    color: white;
+    color: #FFFFFF; /* High contrast for readability */
     border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 10px 25px;
+    font-size: 1.1rem;
     cursor: pointer;
     transition: background-color 0.3s;
+    border-radius: 8px;
 }
 
 #contact-form .submit-btn:hover {
@@ -251,6 +281,7 @@ footer nav a:hover img {
     position: relative;
     overflow: hidden;
     padding-top: 56.25%; /* 16:9 Aspect Ratio (Responsive for iframe) */
+    border-radius: 8px;
 }
 
 .map-container iframe {
@@ -260,6 +291,42 @@ footer nav a:hover img {
     width: 100%;
     height: 90%;
     border: 0;
+}
+
+/* Team Section Styles */
+#team .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#team figure {
+    flex: 1 1 calc(33.333% - 20px); /* Adjusted for better responsive design */
+    margin: 0;
+    text-align: center;
+    background-color: #797676; /* White background for better contrast */
+    border-radius: 8px; /* Rounded corners for team member card */
+    overflow: hidden; /* Ensures images fit within rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+    padding: 20px;
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+#team figure img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px; /* Circular images for team members */
+    margin-bottom: 10px; /* Space between image and caption */
+}
+
+#team figure figcaption {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+#team figure:hover {
+    transform: translateY(-10px); /* Hover effect */
 }
 
 /* Cinematic Video Section */
