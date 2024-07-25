@@ -113,7 +113,7 @@ nav a:hover {
     background: rgba(0, 0, 0, 0.6); /* Darker background for better text contrast */
     padding: 20px;
     text-align: left;
-    margin-top: 20px;
+    margin-top: 7px;
     position: absolute;
     top: 150px;
     left: 10%;
@@ -209,7 +209,7 @@ footer nav a:hover img {
 
 /* Additional Styles for Contact Page */
 
-#contact-info {
+.contact-info {
     margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
@@ -218,25 +218,25 @@ footer nav a:hover img {
     gap: 20px;
 }
 
-#contact-info > div {
+.contact-info > div {
     flex: 1;
     margin-right: 250px;
 }
 
-#contact-form {
+.contact-form {
     margin-top: 40px;
 }
 
-#contact-form label {
+.contact-form label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
     color: var(--primary-color);
 }
 
-#contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form textarea {
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
@@ -246,21 +246,21 @@ footer nav a:hover img {
     box-sizing: border-box;
 }
 
-#contact-form input[type="radio"] {
+.contact-form input[type="radio"] {
     margin-right: 10px;
 }
 
-#contact-form textarea {
+.contact-form textarea {
     height: 200px;
 }
 
-#contact-form .checkbox-label {
+.contact-form .checkbox-label {
     display: block;
     margin-bottom: 10px;
     font-weight: normal;
 }
 
-#contact-form .submit-btn {
+.contact-form .submit-btn {
     background-color: var(--accent1-color);
     color: #FFFFFF; /* High contrast for readability */
     border: none;
@@ -271,7 +271,75 @@ footer nav a:hover img {
     border-radius: 8px;
 }
 
-#contact-form .submit-btn:hover {
+.rafting-trips {
+    margin-bottom: 40px;
+}
+
+.rafting-trips h1, .contact-us h2 {
+    text-align: center;
+    color: #0662be;
+}
+
+.trips {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.trip {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color:#333;
+}   
+
+.trip p {
+    color: #333;
+}
+
+.trip img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.trip ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.trip ul li {
+    padding: 5px 0;
+}
+
+/* Hero Section Enhancement */
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px; /* Ensure space between heading and subheading */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero .cta-button {
+    background-color: var(--accent1-color);
+    color: #fff;
+    padding: 8px 10px;
+    text-decoration: solid;
+    border-radius: 5px;
+    font-size: 1.0rem;
+}
+
+.hero .cta-button:hover {
+    background-color: var(--accent2-color);
+}
+
+
+.contact-form .submit-btn:hover {
     background-color: var(--accent2-color);
 }
 
